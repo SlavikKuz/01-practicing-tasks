@@ -46,7 +46,7 @@ namespace Life
             if (y >= height)
                 return 0;
             if (x < 0) x=0;
-            if (y < 0) y=0;// borders of field
+            if (y < 0) y=0;// borders of field reached
             return sum[x, y];
         }
 
