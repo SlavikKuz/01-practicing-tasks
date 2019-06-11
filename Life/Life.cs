@@ -63,24 +63,18 @@ namespace Life
                 }
         }
 
-        public void RandomizeFrom() //nica forms
-        {
-            int choice;
-            random = new Random();
-            choice = random.Next(100) % 10;
-        }
+        //ordinary logic for surrounding cells
+        //public int Surround(int x, int y)
+        //{
+        //    int sum = 0;
+        //    for (int ax = -1; ax <= 1; ax++)
+        //        for (int ay = -1; ay <= 1; ay++)
+        //            if (ReadField(x + ax, y + ay) > 0)
+        //                sum++;
+        //    return sum;
+        //}
 
-        public int Surround(int x, int y)
-        {
-            int sum = 0;
-            for (int ax = -1; ax <= 1; ax++)
-                for (int ay = -1; ay <= 1; ay++)
-                    if (ReadField(x + ax, y + ay) > 0)
-                        sum++;
-            return sum;
-        }
-
-        public int Surround2(int x, int y)
+        public int Surround2(int x, int y)//select middle cell in 3x3 and summs of fields
         {
             return ReadSum(x-1, y-1) -
                 ReadSum(x + 2, y-1) -
@@ -88,7 +82,7 @@ namespace Life
                 ReadSum(x + 2, y + 2);
         }
 
-        private void Prepare()
+        private void Prepare()//summs
         {
             for (int x = width - 1; x >= 0; x--)
                 for (int y = height - 1; y >= 0; y--)
@@ -99,8 +93,7 @@ namespace Life
                         ReadSum(x + 1, y + 1);
                 }
         }
-
-        
+       
         public void FaseOne() //mark newborn and dead
         {
             Prepare();

@@ -29,13 +29,13 @@ namespace Life
             InitLabels();
         }
 
-        private void Form1_Resize(object sender, System.EventArgs e)
+        private void Form1_Resize(object sender, System.EventArgs e)//rebuild field when resized
         {
             panel1.Controls.Clear();
             InitLabels();
         }
 
-        private void InitLabels()
+        private void InitLabels()//adding labels
         {
             w = panel1.Width / box_w;
             h = panel1.Height / box_h;
@@ -48,7 +48,7 @@ namespace Life
                     AddLabel(i, j);
         }
 
-        private void label1_MouseClick(object sender, MouseEventArgs e)
+        private void label1_MouseClick(object sender, MouseEventArgs e)//mouse paint
         {
             int x = ((Label)sender).Location.X / box_w;
             int y = ((Label)sender).Location.Y / box_h;
@@ -56,19 +56,19 @@ namespace Life
             lab[x, y].BackColor = color == 1 ? col_live : col_empty;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//fase 1
         {
             life.FaseOne();
             RefreshField();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//fase 2
         {
             life.FaseTwo();
             RefreshField();
         }
 
-        private void RefreshField()
+        private void RefreshField()//colorfill
         {
             for (int x = 0; x < w; x++)
                 for (int y = 0; y < h; y++)
@@ -81,14 +81,14 @@ namespace Life
                     }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)//proceed
         {
             life.FaseOne();
             life.FaseTwo();
             RefreshField();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)//timer
         {
             timer.Enabled = !timer.Enabled;
             if (timer.Enabled)
@@ -103,26 +103,59 @@ namespace Life
             }
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)//clear
         {
             panel1.Controls.Clear();
             InitLabels();
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)//timer logic performance
         {
             life.FaseOne();
             life.FaseTwo();
             RefreshField();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)//genrate cells button
         {
             life.Contamine();
             RefreshField();
         }
 
-        private void AddLabel(int x, int y)
+        private void button6_Click(object sender, EventArgs e)//rules. Horrible!
+        {
+            MessageBox.Show("Hello! This is a classical Game of Life game invited by John Conway. " + 
+                Environment.NewLine +
+                Environment.NewLine +
+                "A living cell is blue. It survives only when surrounded by two other cells. " +
+                "A new cell is born if surrounded by three cells. Every cell dies when it is has less or more neighbours." +
+                 Environment.NewLine +
+                 Environment.NewLine +
+                 "Please, use the mouse to build any lifeform that you like! You can add more cells while the evolution is running :)" +
+                 Environment.NewLine +
+                 Environment.NewLine +
+                "Fase One - highlights the cells that are dying(red), newborn(green) and survived(blue)." +
+                 Environment.NewLine +
+                "Fase Two - finishes the turn with removing dead cells and establishing newborn and survived cells." +
+                 Environment.NewLine +
+                "Proceed fases - combines both fases in one step." +
+                 Environment.NewLine +
+                "Contaminate - randomly fills the field with live cells." +
+                 Environment.NewLine +
+                "Clear - clears the field. The field is resizable and every change of sizes clears the field." +
+                 Environment.NewLine +
+                "Timer - starts the Life game until stopped." +
+                 Environment.NewLine +
+                 Environment.NewLine +
+                "The game was programmed as an array of labels. The mathematical model is based on subtraction of fields with cells. " +
+                "The program calculates sums of cells that are to the right and down from a target cell and subtract them. " +
+                Environment.NewLine +
+                Environment.NewLine +
+                "Have fun!", 
+                "Short description", MessageBoxButtons.OK);
+        }
+
+        private void AddLabel(int x, int y) // code for every label
         {
             lab[x, y] = new Label();
             lab[x, y].BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;

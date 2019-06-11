@@ -107,7 +107,7 @@
             this.button5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button5.Location = new System.Drawing.Point(345, 380);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 58);
+            this.button5.Size = new System.Drawing.Size(112, 58);
             this.button5.TabIndex = 5;
             this.button5.Text = "Contaminate";
             this.button5.UseVisualStyleBackColor = true;
@@ -116,17 +116,18 @@
             // button6
             // 
             this.button6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button6.Location = new System.Drawing.Point(475, 381);
+            this.button6.Location = new System.Drawing.Point(564, 381);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(109, 57);
+            this.button6.Size = new System.Drawing.Size(122, 57);
             this.button6.TabIndex = 6;
-            this.button6.Text = "Random form";
+            this.button6.Text = "Game rules";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
             this.button7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button7.Location = new System.Drawing.Point(591, 381);
+            this.button7.Location = new System.Drawing.Point(463, 380);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(95, 57);
             this.button7.TabIndex = 7;
@@ -149,7 +150,7 @@
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Game of Life";
             this.ResizeEnd += new System.EventHandler(this.Form1_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
