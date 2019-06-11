@@ -63,7 +63,7 @@ namespace Life
                 }
         }
 
-        public void RandomizeFrom()
+        public void RandomizeFrom() //nica forms
         {
             int choice;
             random = new Random();
