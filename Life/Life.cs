@@ -11,8 +11,9 @@ namespace Life
         int[,] field; // 0 - empty, 1 - lifeform, -1 - newborn, 2 - dead
         int[,] sum; // number og lifeforms to the right and down from the cell 
         int width, height;
+        Random random;
 
-        public Life(int w, int h)
+        public Life(int w, int h) //creates array of empty cells
         {
             this.width = w;
             this.height = h;
@@ -21,16 +22,16 @@ namespace Life
 
             for (int i = 0; i < width; i++)
                 for (int j = 0; j < height; j++)
-                    field[i, j] = 0;
+                    field[i, j] = 0; //every cell is unpopulated
         }  
 
-        public int SwitchField (int x, int y)
+        public int SwitchField (int x, int y)//empty cell becomes 1 and vice versa
         {
             field[x, y] = field[x, y] == 0 ? 1 : 0;
             return field[x, y];
         }
 
-        public int ReadField (int x, int y)
+        public int ReadField (int x, int y)//cell value becomes 0, if dead or out of borders
         {
             if (x < 0 || x >= width)
                 return 0;
@@ -39,7 +40,7 @@ namespace Life
             return field[x, y]; 
         }
 
-        public int ReadSum(int x, int y)
+        public int ReadSum(int x, int y)//sum of lifeforms
         {
             if (x >= width)
                 return 0;
@@ -48,6 +49,25 @@ namespace Life
             if (x < 0) x=0;
             if (y < 0) y=0;// borders of field reached
             return sum[x, y];
+        }
+
+        public void Contamine()
+        {
+            random = new Random();
+            for (int i = 0; i < width; i++)
+                for (int j = 0; j < height; j++)
+                {
+                    field[i, j] = random.Next(100) % 2;//generate 1 and 0
+                    if (i * j % 3 == 1 || i * j % 5 == 1) //remove some cells
+                        field[i, j] = 0;
+                }
+        }
+
+        public void RandomizeFrom()
+        {
+            int choice;
+            random = new Random();
+            choice = random.Next(100) % 10;
         }
 
         public int Surround(int x, int y)
@@ -115,5 +135,6 @@ namespace Life
                 }
                    
         }
+
     }
 }

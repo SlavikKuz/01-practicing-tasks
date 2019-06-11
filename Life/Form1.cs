@@ -116,6 +116,12 @@ namespace Life
             RefreshField();
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            life.Contamine();
+            RefreshField();
+        }
+
         private void AddLabel(int x, int y)
         {
             lab[x, y] = new Label();
