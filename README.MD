@@ -1,4 +1,6 @@
-Hello! This is a classical Game of Life game invited by John Conway. 
+#Hello! 
+
+This is a classical Game of Life game invited by John Conway. 
 
 A living cell is blue. It survives only when surrounded by two other cells. A new cell is born if surrounded by three cells. Every cell dies when it is has less or more neighbours.
 
@@ -19,6 +21,7 @@ The game was programmed as an array of labels. The mathematical model is based o
 The program sums number of cells that are placed in the rectangle, which sides are: 
 - distance from the cell to the right edge, and 
 - distance from the cell to the bottom edge of field.
+
 Rectangles are built for every cell and calculated. 
 Then, from the sum of the selected cell substracts sum of closest cells that are to the right and down from it.    
 
