@@ -1,6 +1,8 @@
-#Hello! 
+Hi! 
 
 This is a classical Game of Life game invited by John Conway. 
+
+<img src="/Skjermbilde.png?raw=true" width="320"/>
 
 A living cell is blue. It survives only when surrounded by two other cells. A new cell is born if surrounded by three cells. Every cell dies when it is has less or more neighbours.
 
