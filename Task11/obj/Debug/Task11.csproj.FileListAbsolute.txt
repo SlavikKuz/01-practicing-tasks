@@ -1,0 +1,6 @@
+C:\Users\slavi\source\repos\TinyBits0\Task11\bin\Debug\Task11.exe.config
+C:\Users\slavi\source\repos\TinyBits0\Task11\bin\Debug\Task11.exe
+C:\Users\slavi\source\repos\TinyBits0\Task11\bin\Debug\Task11.pdb
+C:\Users\slavi\source\repos\TinyBits0\Task11\obj\Debug\Task11.csproj.CoreCompileInputs.cache
+C:\Users\slavi\source\repos\TinyBits0\Task11\obj\Debug\Task11.exe
+C:\Users\slavi\source\repos\TinyBits0\Task11\obj\Debug\Task11.pdb
