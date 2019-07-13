@@ -59,9 +59,9 @@ Create two methods `Clone()` and `DeepClone()`, which perform shallow and deep c
 #### Solution
 
 1. The `class House` have two private fields: `string city` and `Street street`, and properties: `string City` and `Street Street` accordingly.
-- `public House(args)` initiates fields with values;
-- `public House Clone()` returns `this`, as !!!!!!!!!;
-- `public House DeepClone()` returns `new House` where it copies the original instance (`this.street.Clone()`, `this.City`).
+- constructor `public House(args)` initiates fields with values;
+- `public House Clone()` returns `this`, as a refernce to the instance;
+- `public House DeepClone()` returns `new House` where it copies the fields of the original instance (`this.street.Clone()`, `this.City`), not the references.
 2. The `class Street : IClonable` implements the interface to be cloned;
 - field `string str` stores the name of the street. Property `Str` only returns its value;
 - `public Street(args)` initiates field `str`;
@@ -69,3 +69,18 @@ Create two methods `Clone()` and `DeepClone()`, which perform shallow and deep c
 3. `class Program` creates a new instance of `House` with parameters `new Street("Rambergveien")` and `"Toensberg"`. `House clone = house.DeepClone()` is made to clone the instance. `Console.WriteLine` of both properties shows the result.
 
 #### Task13
+Create a class that will contain information about the date (day, month, year). Using the operator overload determine the operation of the difference between two dates (the result is the number of days between dates), and the operation of increasing the date by a certain number of days.
+
+#### Solution
+1. Create a `class MyDate` which cointains readonly field `DateTime date` and static overloaded methods.
+- `public MyDate(args)` initiates field date;
+- `public static MyDate operator - ()` accepts two objects of `MyDate` type. A new `TimeSpan` object equals the substraction between two entered dates. Then a `new DateTime` object is the first date with an added timespan. Timespan can have negative value. Adjusted first `DateTime` argument is returned;
+- `public static MyDate operator + ()` is quite the same, but adds `-timeSpan`, which results in positive increasing;
+- `public override string ToString()` returns literal `Date:` and `date` field.
+- `public static MyDate Sub(args)` returns overriden d1 - d2;
+- `public static MyDate Add(args)` returns overriden d1 + d2.
+2. `class Program` creates a new instance of current date `DateTime.Now` and instance of second date. `MyDate.Sub(date1, date2).ToString()` returns difference in days.
+
+#### Task14
+
+#### Solution
