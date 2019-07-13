@@ -52,5 +52,20 @@ Then write a program that performs the following actions:
 - asks user input (1||2), then try/catch `Convert.ToInt32` function to protect input;
 - shows requested store.
 
+#### Task 12
+Create the `class House` with two fields and properties that describe `city` and `street` where the house stands. `Street` must be represented as a `class` that implements interface for clonning. 
+Create two methods `Clone()` and `DeepClone()`, which perform shallow and deep copying, respectively. Implement a simple way to check.
 
+#### Solution
 
+1. The `class House` have two private fields: `string city` and `Street street`, and properties: `string City` and `Street Street` accordingly.
+- `public House(args)` initiates fields with values;
+- `public House Clone()` returns `this`, as !!!!!!!!!;
+- `public House DeepClone()` returns `new House` where it copies the original instance (`this.street.Clone()`, `this.City`).
+2. The `class Street : IClonable` implements the interface to be cloned;
+- field `string str` stores the name of the street. Property `Str` only returns its value;
+- `public Street(args)` initiates field `str`;
+- `public object Clone()` implements interface `Iclonable` and the method returns `new Street(this.str)` that copies the fields of the source instance.
+3. `class Program` creates a new instance of `House` with parameters `new Street("Rambergveien")` and `"Toensberg"`. `House clone = house.DeepClone()` is made to clone the instance. `Console.WriteLine` of both properties shows the result.
+
+#### Task13

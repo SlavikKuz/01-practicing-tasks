@@ -1,0 +1,7 @@
+C:\Users\slavi\source\repos\TinyBits0\Task12\bin\Debug\Task12.exe.config
+C:\Users\slavi\source\repos\TinyBits0\Task12\bin\Debug\Task12.exe
+C:\Users\slavi\source\repos\TinyBits0\Task12\bin\Debug\Task12.pdb
+C:\Users\slavi\source\repos\TinyBits0\Task12\obj\Debug\Task12.csprojAssemblyReference.cache
+C:\Users\slavi\source\repos\TinyBits0\Task12\obj\Debug\Task12.csproj.CoreCompileInputs.cache
+C:\Users\slavi\source\repos\TinyBits0\Task12\obj\Debug\Task12.exe
+C:\Users\slavi\source\repos\TinyBits0\Task12\obj\Debug\Task12.pdb
