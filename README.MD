@@ -82,5 +82,9 @@ Create a class that will contain information about the date (day, month, year). 
 2. `class Program` creates a new instance of current date `DateTime.Now` and instance of second date. `MyDate.Sub(date1, date2).ToString()` returns difference in days.
 
 #### Task14
-
+Using Visual Studio, create a project using the Console Application template.
+Imagine that you are writing an application for a Bus Station and you need to create a simple `collection of cars` with the following data: `car make`, `model`, `year` of production, and `color`. As well as the `second collection` with a `car model`, the `name of the buyer` and his `phone number`. Using a simple LINQ query, display `information` about the `buyer, their car/cars, and the `full description` of the model they purchased.
 #### Solution
+1. Create `class Car` with readonly fields `carMake`, `model`, `year`, `color`, properties and user's constructor that initiates all fields.
+2. Create `class Customer` with readonly fields `model`, `name`, `cellPhone`, properties and user's constructor that initiates all fields.
+3. In the program class create two lists for `Cars` and `Customers` and initiate them with 4 new cars and 3 new customers. Then, create a `Linq` query that selects all values with `join ...  on car.Model equals cust.Model`. Results are passed as an `anonyme type` with all required properties from both lists. Write on the console the inhold in the query.
