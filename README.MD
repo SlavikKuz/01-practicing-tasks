@@ -68,7 +68,7 @@ Create two methods `Clone()` and `DeepClone()`, which perform shallow and deep c
 - `public object Clone()` implements interface `Iclonable` and the method returns `new Street(this.str)` that copies the fields of the source instance.
 3. `class Program` creates a new instance of `House` with parameters `new Street("Rambergveien")` and `"Toensberg"`. `House clone = house.DeepClone()` is made to clone the instance. `Console.WriteLine` of both properties shows the result.
 
-#### Task13
+#### Task 13
 Create a class that will contain information about the date (day, month, year). Using the operator overload determine the operation of the difference between two dates (the result is the number of days between dates), and the operation of increasing the date by a certain number of days.
 
 #### Solution
@@ -81,10 +81,31 @@ Create a class that will contain information about the date (day, month, year). 
 - `public static MyDate Add(args)` returns overriden d1 + d2.
 2. `class Program` creates a new instance of current date `DateTime.Now` and instance of second date. `MyDate.Sub(date1, date2).ToString()` returns difference in days.
 
-#### Task14
+#### Task 14
 Using Visual Studio, create a project using the Console Application template.
 Imagine that you are writing an application for a Bus Station and you need to create a simple `collection of cars` with the following data: `car make`, `model`, `year` of production, and `color`. As well as the `second collection` with a `car model`, the `name of the buyer` and his `phone number`. Using a simple LINQ query, display `information` about the `buyer, their car/cars, and the `full description` of the model they purchased.
+
 #### Solution
 1. Create `class Car` with readonly fields `carMake`, `model`, `year`, `color`, properties and user's constructor that initiates all fields.
 2. Create `class Customer` with readonly fields `model`, `name`, `cellPhone`, properties and user's constructor that initiates all fields.
 3. In the program class create two lists for `Cars` and `Customers` and initiate them with 4 new cars and 3 new customers. Then, create a `Linq` query that selects all values with `join ...  on car.Model equals cust.Model`. Results are passed as an `anonyme type` with all required properties from both lists. Write on the console the inhold in the query.
+
+#### Task 15
+Create a collection that stores the names of 12 months, the order number and the number of days in the corresponding month. Implement the ability to select months as per serial number as well as the number of days in a month. The result may not be only one month.
+
+#### Solution
+1. Create 'class Month' with readonly fields 'order', 'name', 'days' and corresponding properties.
+- 'public Month(int order, int name)' constructor takes the order number and number of the month. Month's 'name' is taken from 'CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(name)' property, and 'number' of days is from 'DateTime.DaysInMonth(DateTime.Now.Year, name)'.
+- 'public override string ToString()' returns a full information about the month.
+- 'public bool FindMonth(int days)' returns true if passed number of days ie equal to the number of days in the instance of the class.
+2. Create 'class Calendar: IEnumerable, IEnumerator' which contains an array of 'Month' instances.
+- 'public Calendar()' creates an array (size 12) an authomatically fills it with instances with uatomated values.
+- 'IEnumerable' implements method that upcastes 'Calendar' to the 'IEnumerator' type.
+- 'IEnumerator' members are implemented: position, object Current, bool MoveNext(), void Reset(), string this[int index].
+- method 'void FindMonthesByDays(int days)' writes on the console all the 'Month' instances on which 'FindMonth' method returns 'true'. In case of problem it shows "The month does not exist!".
+3. Program file creates an arrays and asks for user's input. Inputs are within try/catch blocks.
+
+#### Task 16
+
+
+#### Solution
