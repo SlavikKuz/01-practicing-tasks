@@ -17,7 +17,7 @@ Write a program that takes the length of two sides of the rectangle from the use
 2. In the program class a method `double GetSide()` was created which tries to parse input into `double s`.
 3. `While` loop uses two methods `GetSide()` until `rec.Area > 0 && rec.Perimeter > 0` is true. It means that inputs were succesfully parsed into `double`, and satisfactory results were calculated. Additional `bool Test` is used, and it gets value `True`, when the input is correct, and then the loop breaks.
 
-
+<div>
 #### Task 10
 <p>
 Using Visual Studio, create a Console Application project.
@@ -45,7 +45,7 @@ Create a collection `MyDictionary <TKey, TValue>`. Implement the possibility of 
 2.1. Create instance of `MyDictionary<string, string>(3)` and fill in values using method `Add()` on the instance.
 2.2. Using `foreach` loop show all values in the Console.
 2.3. Write in the Console value by position, and total length.
-
+</div>
 
 #### Task 11
 <p>
