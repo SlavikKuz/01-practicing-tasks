@@ -1,13 +1,13 @@
 ### Hi! This is a set short practicing tasks 
 
-<p>
-#### Task 01
 
+#### Task 01
+<p>
 Using `Visual Studio`, create a `Console Application` project.
 Create a `class Rectangle`.
 In the class body, create two fields describing the lengths of the sides `double side1`, `side2`.
 Create a custom Rectangle constructor which takes arguments `(double side1, double side2)` which initializes fields `side1` and `side2` with argument values.
-Create two methods that calculate the area of ??the rectangle - `double AreaCalculator()` and the perimeter of the rectangle - `double PerimeterCalculator()`.
+Create two methods that calculate the area of the rectangle - `double AreaCalculator()` and the perimeter of the rectangle - `double PerimeterCalculator()`.
 Create two properties, `double Area` and `double Perimeter`, with one `get` access method.
 Write a program that takes the length of two sides of the rectangle from the user and displays the perimeter and area. The program must ask user to enter the data, until the input is correct. 
 </p>
@@ -17,8 +17,9 @@ Write a program that takes the length of two sides of the rectangle from the use
 2. In the program class a method `double GetSide()` was created which tries to parse input into `double s`.
 3. `While` loop uses two methods `GetSide()` until `rec.Area > 0 && rec.Perimeter > 0` is true. It means that inputs were succesfully parsed into `double`, and satisfactory results were calculated. Additional `bool Test` is used, and it gets value `True`, when the input is correct, and then the loop breaks.
 
-<p>
+
 #### Task 10
+<p>
 Using Visual Studio, create a Console Application project.
 Create a collection `MyDictionary <TKey, TValue>`. Implement the possibility of using its instance as if it were an instance of the `Dictionary <TKey, TValue> class`. The minimum interface required for interacting with an instance should include a method for adding an element, an indexer to get the value of an element at a specified index, and a read-only property to get the total number of elements. Implement the ability to iterate through the elements of a collection in a `foreach` loop.
 </p>
@@ -45,9 +46,9 @@ Create a collection `MyDictionary <TKey, TValue>`. Implement the possibility of 
 2.2. Using `foreach` loop show all values in the Console.
 2.3. Write in the Console value by position, and total length.
 
-<p>
-#### Task 11
 
+#### Task 11
+<p>
 Using Visual Studio, create a Console Application project.
 Create a structure named `Price`, containing the following fields:
 • `Product Name`;
