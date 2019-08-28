@@ -46,6 +46,7 @@ Create a collection `MyDictionary <TKey, TValue>`. Implement the possibility of 
 2.2. Using `foreach` loop show all values in the Console.
 2.3. Write in the Console value by position, and total length.
 </div>
+<br>
 
 #### Task 11
 <p>
