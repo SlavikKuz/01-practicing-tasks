@@ -1,7 +1,7 @@
 ### Hi! This is a set short practicing tasks 
 
 #### Task 01
-
+<p>
 
 
 
@@ -13,10 +13,11 @@
 Using Visual Studio, create a Console Application project.
 Create a collection `MyDictionary <TKey, TValue>`. Implement the possibility of using its instance as if it were an instance of the `Dictionary <TKey, TValue> class`. The minimum interface required for interacting with an instance should include a method for adding an element, an indexer to get the value of an element at a specified index, and a read-only property to get the total number of elements. Implement the ability to iterate through the elements of a collection in a `foreach` loop.
 
-
+</p>
 
 #### Solution
 
+<p>
 1. Create collection `MyDictionary <Tkey, Tvalue>` that will implement interfaces `IEnumerable<object>`, `IEnumerator<object>`.
 1.2. `MyDictionary <Tkey, Tvalue>` immitates `Dictionary <TKey, TValue> class` with the help of two arrays `Tkey[] tKey` and `Tvalue[] tValue`. Both are set to readonly.
 1.3. In the collection type:
@@ -36,8 +37,10 @@ Create a collection `MyDictionary <TKey, TValue>`. Implement the possibility of 
 2.1. Create instance of `MyDictionary<string, string>(3)` and fill in values using method `Add()` on the instance.
 2.2. Using `foreach` loop show all values in the Console.
 2.3. Write in the Console value by position, and total length.
+</p>
 
 #### Task 11
+<p>
 Using Visual Studio, create a Console Application project.
 Create a structure named `Price`, containing the following fields:
 • `Product Name`;
@@ -46,9 +49,10 @@ Create a structure named `Price`, containing the following fields:
 Then write a program that performs the following actions:
 • input from the keyboard data into an array consisting of two elements of type `Price` (entries must be arranged in alphabetical order by store name);
 • displaying information about products sold in a store which number (1||2) is entered from the keyboard (if there is no such store, display an exception).
+</p>
 
 #### Solution
-
+<p>
 1. Create `struct Prices` that has private fields `string productName`, `string storeName`, and nullable `double? price`. Accordingly public access properties with only `get` accessor: `ProductName`, `StoreName`, and `Price`. The struct has constructor that receives values and intiates fields.
 2. Create `class Stores` that includes: array of structs `Prices[] stores`, constructor, method `Show()`, and indexer.
 - `Prices[] stores` is declared in the body of the class and will be initiated by constructor;
@@ -60,10 +64,13 @@ Then write a program that performs the following actions:
 - print out data from the array;
 - asks user input (1||2), then try/catch `Convert.ToInt32` function to protect input;
 - shows requested store.
+</p>
 
 #### Task 12
+<p>
 Create the `class House` with two fields and properties that describe `city` and `street` where the house stands. `Street` must be represented as a `class` that implements interface for clonning. 
 Create two methods `Clone()` and `DeepClone()`, which perform shallow and deep copying, respectively. Implement a simple way to check.
+</p>
 
 #### Solution
 
@@ -78,7 +85,9 @@ Create two methods `Clone()` and `DeepClone()`, which perform shallow and deep c
 3. `class Program` creates a new instance of `House` with parameters `new Street("Rambergveien")` and `"Toensberg"`. `House clone = house.DeepClone()` is made to clone the instance. `Console.WriteLine` of both properties shows the result.
 
 #### Task 13
+<p>
 Create a class that will contain information about the date (day, month, year). Using the operator overload determine the operation of the difference between two dates (the result is the number of days between dates), and the operation of increasing the date by a certain number of days.
+</p>
 
 #### Solution
 1. Create a `class MyDate` which cointains readonly field `DateTime date` and static overloaded methods.
@@ -91,8 +100,10 @@ Create a class that will contain information about the date (day, month, year). 
 2. `class Program` creates a new instance of current date `DateTime.Now` and instance of second date. `MyDate.Sub(date1, date2).ToString()` returns difference in days.
 
 #### Task 14
+<p>
 Using Visual Studio, create a project using the Console Application template.
 Imagine that you are writing an application for a Bus Station and you need to create a simple `collection of cars` with the following data: `car make`, `model`, `year` of production, and `color`. As well as the `second collection` with a `car model`, the `name of the buyer` and his `phone number`. Using a simple LINQ query, display `information` about the `buyer, their car/cars, and the `full description` of the model they purchased.
+</p>
 
 #### Solution
 1. Create `class Car` with readonly fields `carMake`, `model`, `year`, `color`, properties and user`s constructor that initiates all fields.
@@ -100,6 +111,7 @@ Imagine that you are writing an application for a Bus Station and you need to cr
 3. In the program class create two lists for `Cars` and `Customers` and initiate them with 4 new cars and 3 new customers. Then, create a `Linq` query that selects all values with `join ...  on car.Model equals cust.Model`. Results are passed as an `anonyme type` with all required properties from both lists. Write on the console the inhold in the query.
 
 #### Task 15
+<p>
 Create a collection that stores the names of 12 months, the order number and the number of days in the corresponding month. Implement the ability to select months as per serial number as well as the number of days in a month. The result may not be only one month.
 
 #### Solution
@@ -113,8 +125,10 @@ Create a collection that stores the names of 12 months, the order number and the
 - `IEnumerator` members are implemented: position, object Current, bool MoveNext(), void Reset(), string this[int index].
 - method `void FindMonthesByDays(int days)` writes on the console all the `Month` instances on which `FindMonth` method returns `true`. In case of problem it shows `"The month does not exist!"`.
 3. Program file creates an arrays and asks for user`s input. Inputs are within `try/catch` blocks.
+</p>
 
 #### Task 16
+<p>
 Create an `abstract class Citizen`. Create `classes Student`, `Pensioner`, `Worker` inherited from `Citizen`. Create a non-parameterized collection with the following functions.
 1. Add:
   - you can add only `Citizen`.
@@ -135,3 +149,4 @@ Create an `abstract class Citizen`. Create `classes Student`, `Pensioner`, `Work
 
 #### Solution
 1. 
+</p>
